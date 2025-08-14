@@ -43,14 +43,17 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                 'crm' => 'crm/index',
+                 'crm/<type:(contacts|deals)>' => 'crm/index',
+                 'crm/<type:(contacts|deals)>/<id:\d+>' => 'crm/index',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
